@@ -1,0 +1,5 @@
+#ignore
+/venv
+app-dev.py
+#allow
+!app.py
