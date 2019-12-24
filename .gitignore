@@ -1,6 +1,7 @@
 #ignore
 /venv
 /.idea/
+creds.py
 #app-dev.py
 #allow
 !app.py
