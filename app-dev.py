@@ -52,7 +52,7 @@ while True:
                 if bool(fileName):
                     print(datetime.now(),console_text,'Attachment found:',fileName)
                     print(datetime.now(),console_text,'Attempting to download...')
-                    filePath = os.path.join('/home/necro/scans', fileName)
+                    filePath = os.path.join('c:/temp', fileName)
                     print(datetime.now(), console_text, 'Checking if file exists and writing file to:', filePath)
                     if not os.path.isfile(filePath):
                         print(datetime.now(), console_text, 'File does not exist! Writing to disk...', filePath)
