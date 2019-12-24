@@ -16,8 +16,7 @@ print(datetime.now(),console_text,'Signing in...')
 typ, accountDetails = mail.login(email_user, email_pass)
 
 if typ != 'OK':
-    print(datetime.now(),console_text, 'Not able to sign in!')
-    raise
+    raise Exception("Not able to sign in!")
 if typ == 'OK':
     print(datetime.now(),console_text, 'Signed in!')
 
@@ -27,8 +26,7 @@ while True:
         mail.select('Inbox')
         typ, data = mail.search(None, 'NOT', 'SEEN')
         if typ != 'OK':
-            print(datetime.now(),console_text,'Error searching inbox!')
-            raise
+            raise Exception('Error searching inbox!')
         mail_ids = data[0]
         id_list = mail_ids.split()
         if id_list == []:
@@ -38,8 +36,7 @@ while True:
         for num in data[0].split():
             typ, data = mail.fetch(num, '(RFC822)')
             if typ != 'OK':
-                print(datetime.now(),console_text,'Error fetching mail!')
-                raise
+                raise Exception('Error fetching mail!')
             raw_email = data[0][1]
             raw_email_string = raw_email.decode('utf-8')
             email_message = email.message_from_string(raw_email_string)
