@@ -1,5 +1,5 @@
 #ignore
 /venv
-app-dev.py
+#app-dev.py
 #allow
 !app.py
