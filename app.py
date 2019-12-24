@@ -3,12 +3,13 @@ import time
 import os
 import email
 import sys
+import creds
 
 from datetime import datetime
 
 console_text = '[Console]'
-email_user = 'scanquakeemail@gmail.com'
-email_pass = 'eubeghawzrztuolz'
+email_user = creds.email_address
+email_pass = creds.email_password
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
 print(datetime.now(),console_text,'Signing in...')
