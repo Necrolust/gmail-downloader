@@ -1,6 +1,5 @@
 import imaplib
 import time
-import base64
 import os
 import email
 import sys
