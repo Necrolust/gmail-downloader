@@ -3,3 +3,4 @@
 #app-dev.py
 #allow
 !app.py
+!app-dev.py
